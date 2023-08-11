@@ -70,7 +70,7 @@ export const managers = [
 
     // Angel
     {
-      "managerID" : "994678807845982208",  // ID of the roster that the manager manages (look at the order of the power rankings graph)
+      "managerID" : "994670697622343680",  // ID of the roster that the manager manages (look at the order of the power rankings graph)
       "name": "Angel",
       // "tookOver": 2023, // (optional) used if a manager took over a team, delete this line or change to null otherwise
       "location": "Seattle", // (optional)
