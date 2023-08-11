@@ -22,7 +22,7 @@ https://github.com/nmelhado/league-page/blob/master/TRAINING_WHEELS.md#ii-adding
 
 export const managers = [
     {
-      "roster": 1,  // ID of the roster that the manager manages (look at the order of the power rankings graph)
+      "managerID" : "825182685528989696",  // ID of the roster that the manager manages (look at the order of the power rankings graph)
       "name": "Riff",
       // "tookOver": 2023, // (optional) used if a manager took over a team, delete this line or change to null otherwise
       "location": "Brooklyn", // (optional)
@@ -46,7 +46,7 @@ export const managers = [
 
     // Migz
     {
-      "roster": 2,  // ID of the roster that the manager manages (look at the order of the power rankings graph)
+      "managerID" : "990681730120015872", // ID of the roster that the manager manages (look at the order of the power rankings graph)
       "name": "Migz",
       // "tookOver": 2023, // (optional) used if a manager took over a team, delete this line or change to null otherwise
       "location": "The Heights", // (optional)
@@ -70,8 +70,8 @@ export const managers = [
 
     // Angel
     {
-      "roster": 3,  // ID of the roster that the manager manages (look at the order of the power rankings graph)
-      "name": "Riff",
+      "managerID" : "994678807845982208",  // ID of the roster that the manager manages (look at the order of the power rankings graph)
+      "name": "Angel",
       // "tookOver": 2023, // (optional) used if a manager took over a team, delete this line or change to null otherwise
       "location": "Seattle", // (optional)
       "bio": "Navy",
