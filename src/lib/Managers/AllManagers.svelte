@@ -1,6 +1,7 @@
 <script>
     import { leagueName } from '$lib/utils/helper';
     import ManagerRow from './ManagerRow.svelte';
+    import adapter from '@sveltejs/adapter-vercel';
 
     export let managers, leagueTeamManagers;
 
