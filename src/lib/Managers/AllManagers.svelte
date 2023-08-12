@@ -28,91 +28,80 @@
 <svelte:window bind:innerWidth={innerWidth} />
 
 <style>
-/* Utilizing modern fonts for a sleek appearance */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
-
-h2 {
-    font-family: 'Poppins', sans-serif;
-    color: #333; /* Soft black for text */
-    text-align: center;
-    font-size: 1.6em;
-    margin-bottom: 1em;
-    letter-spacing: -0.6px;
-}
-
-.managerContainer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 1em; /* Added padding to ensure content doesn't touch screen edges */
-}
-
-.managerItem {
-    flex: 1 1 calc(100% - 20px); /* Full width for mobile by default */
-    margin: 10px;
-    padding: 15px; /* Reduced padding */
-    background-color: #fff;
-    border-radius: 7px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-img {
-    max-width: 100%; /* Ensuring images don't break layout */
-    border-radius: 5px; /* Optional, for some styling */
-    margin-bottom: 10px; /* Reduced margin */
-}
-
-h3 {
-    margin-bottom: 8px;
-    font-size: 1.3em; /* Adjusted size */
-    color: #007BFF; /* Giving color to manager name for some contrast */
-}
-
-.carouselBtn {
-    background-color: #007BFF; 
-    border: none;
-    padding: 8px 16px; /* Reduced padding for mobile */
-    margin-top: 8px;
-    cursor: pointer;
-    color: #ffffff; 
-    border-radius: 5px;
-    transition: background-color 0.3s ease, transform 0.2s ease; 
-}
-
-.carouselBtn:hover {
-    background-color: #0056b3;
-    transform: scale(1.03);
-}
-
-/* Adjustments for bigger screens (tablets onwards) */
-@media (min-width: 521px) {
-    .managerItem {
-        flex: 1 1 calc(50% - 20px); /* 2 items per row on larger screens */
-    }
+    /* Utilizing modern fonts for a sleek appearance */
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
     h2 {
-        font-size: 2em;
-        margin: 1.5em 0 1em;
+        font-family: 'Poppins', sans-serif;
+        color: #333; /* Soft black for text */
+    }
+
+    .managerContainer {
+        /* ... existing styles ... */
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .managerItem {
+        flex: 1 1 calc(33.333% - 20px); /* Taking up roughly a third, minus margins for space */
+        margin: 10px;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+    img {
+        max-width: 100%; /* Ensuring images don't break layout */
+        border-radius: 5px; /* Optional, for some styling */
+        margin-bottom: 15px;
     }
 
     h3 {
-        font-size: 1.5em;
-    }
-}
-
-/* Adjustments for desktop screens */
-@media (min-width: 800px) {
-    .managerItem {
-        flex: 1 1 calc(33.333% - 20px); /* 3 items per row on desktop */
+        margin-bottom: 10px;
+        color: #007BFF; /* Giving color to manager name for some contrast */
     }
 
+    /* Adjusting for smaller screens */
+    @media (max-width: 520px) {
+        .managerItem {
+            flex: 1 1 100%; /* On smaller screens, manager item will take full width */
+        }
+    }
+
+    /* Titles styles */
     h2 {
+        text-align: center;
         font-size: 2.4em;
         margin-bottom: 2em;
+        letter-spacing: -0.8px; /* Tighten the letter spacing for modern feel */
     }
-}
 
+    @media (max-width: 520px) {
+        h2 {
+            font-size: 1.8em;
+            margin: 1.5em 0 1em;
+        }
+    }
+
+    /* Button styling with hover transition */
+    .carouselBtn {
+        background-color: #007BFF; /* Vibrant blue for a modern touch */
+        border: none;
+        padding: 12px 24px;
+        margin-top: 10px;
+        cursor: pointer;
+        color: #ffffff; /* White text for contrast */
+        border-radius: 5px;
+        transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+    }
+
+    .carouselBtn:hover {
+        background-color: #0056b3; /* Darken on hover */
+        transform: scale(1.05); /* Slightly increase size for a dynamic feel */
+    }
 </style>
 
 
@@ -122,11 +111,7 @@ h3 {
 
     <!-- Manager Row Item -->
     <div class="managerItem">
-        <div class="managerConstrained">
-            {#each managers as manager, key}
-                <ManagerRow {manager} {leagueTeamManagers} {key} />
-            {/each}
-        </div>
+        <!-- Manager content goes here. For instance: -->
         <!-- svelte-ignore a11y-img-redundant-alt -->
         <img src="managerImage.jpg" alt="Manager Image" />
         <h3>Manager Name</h3>
@@ -140,11 +125,7 @@ h3 {
 
     <!-- Manager Row Item -->
     <div class="managerItem">
-        <div class="managerConstrained">
-            {#each managers as manager, key}
-                <ManagerRow {manager} {leagueTeamManagers} {key} />
-            {/each}
-        </div>
+        <!-- Manager content goes here. For instance: -->
         <!-- svelte-ignore a11y-img-redundant-alt -->
         <img src="managerImage.jpg" alt="Manager Image" />
         <h3>Manager Name</h3>
@@ -161,11 +142,7 @@ h3 {
 
     <!-- Manager Row Item -->
     <div class="managerItem">
-        <div class="managerConstrained">
-            {#each managers as manager, key}
-                <ManagerRow {manager} {leagueTeamManagers} {key} />
-            {/each}
-        </div>        
+        <!-- Manager content goes here. For instance: -->
         <!-- svelte-ignore a11y-img-redundant-alt -->
         <img src="managerImage.jpg" alt="Manager Image" />
         <h3>Manager Name</h3>
