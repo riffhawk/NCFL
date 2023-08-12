@@ -16,9 +16,7 @@
     /* Using Roboto as an example; ensure it's available or replace with another font */
     @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-    body, h2 {
-        font-family: 'Roboto', sans-serif;
-    }
+
 
     .managerContainer {
         width: 100%;
@@ -52,21 +50,6 @@
         }
     }
 
-    /* Enhancing the buttons */
-    .carouselBtn {
-        background-color: #007BFF; /* A vibrant blue */
-        border: none;
-        padding: 10px 20px;
-        margin: 10px;
-        cursor: pointer;
-        color: white; /* Text color */
-        border-radius: 4px;
-        transition: background-color 0.3s ease; /* Transition effect */
-    }
-
-    .carouselBtn:hover {
-        background-color: #0056b3; /* A darker blue on hover */
-    }
 </style>
 
 <div class="managerContainer">
