@@ -3,13 +3,14 @@
     import { fade } from 'svelte/transition';
     import ManagerRow from './ManagerRow.svelte';
 
-    export let managers, leagueTeamManagers;
+    export let managers = [];
+    export let leagueTeamManagers;
 
     let innerWidth;
     let currentManagerIndex = 0;
 
     function nextManager() {
-        if (currentManagerIndex < managers.length - 1) {
+        if (managers && currentManagerIndex < managers.length - 1) {
             currentManagerIndex++;
         } else {
             currentManagerIndex = 0; 
@@ -17,9 +18,9 @@
     }
 
     function previousManager() {
-        if (currentManagerIndex > 0) {
+        if (managers && currentManagerIndex > 0) {
             currentManagerIndex--;
-        } else {
+        } else if (managers) {
             currentManagerIndex = managers.length - 1; 
         }
     }
@@ -34,6 +35,7 @@
 
     .managerContainer {
         max-width: 900px;
+        width: 90%; /* a bit of responsiveness */
         margin: 2em auto;
         padding: 2em;
         background-color: #ffffff;
@@ -73,7 +75,7 @@
         background-color: #0056b3;
         transform: scale(1.05);
     }
-    
+
     .btnContainer {
         display: flex;
         justify-content: center;
@@ -87,6 +89,7 @@
     <h2>{leagueName} Managers</h2>
     
     <div in:fade={{ duration: 300 }}>
+        <!-- Remember to handle the fallback image scenario in ManagerRow component! -->
         <ManagerRow 
             manager={managers[currentManagerIndex]} 
             leagueTeamManagers={leagueTeamManagers} 
