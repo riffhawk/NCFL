@@ -122,7 +122,11 @@ h3 {
 
     <!-- Manager Row Item -->
     <div class="managerItem">
-        <!-- Manager content goes here. For instance: -->
+        <div class="managerConstrained">
+            {#each managers as manager, key}
+                <ManagerRow {manager} {leagueTeamManagers} {key} />
+            {/each}
+        </div>
         <!-- svelte-ignore a11y-img-redundant-alt -->
         <img src="managerImage.jpg" alt="Manager Image" />
         <h3>Manager Name</h3>
@@ -136,7 +140,11 @@ h3 {
 
     <!-- Manager Row Item -->
     <div class="managerItem">
-        <!-- Manager content goes here. For instance: -->
+        <div class="managerConstrained">
+            {#each managers as manager, key}
+                <ManagerRow {manager} {leagueTeamManagers} {key} />
+            {/each}
+        </div>
         <!-- svelte-ignore a11y-img-redundant-alt -->
         <img src="managerImage.jpg" alt="Manager Image" />
         <h3>Manager Name</h3>
@@ -153,7 +161,11 @@ h3 {
 
     <!-- Manager Row Item -->
     <div class="managerItem">
-        <!-- Manager content goes here. For instance: -->
+        <div class="managerConstrained">
+            {#each managers as manager, key}
+                <ManagerRow {manager} {leagueTeamManagers} {key} />
+            {/each}
+        </div>        
         <!-- svelte-ignore a11y-img-redundant-alt -->
         <img src="managerImage.jpg" alt="Manager Image" />
         <h3>Manager Name</h3>
